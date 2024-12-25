@@ -1,0 +1,52 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+  </head>
+  <body>
+    <div
+      style="
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      "
+    >
+      <button onclick="onSubmit()">send mail</button>
+    </div>
+    <script>
+      function onSubmit() {
+        const emailParams = {
+          Port: 2525,
+          Host: "smtp.elasticemail.com", // Your SMTP server
+          Username: "ahmedhmedo73@gmail.com", // Your SMTP username
+          Password: "838EEBCFA070463882DBAD486958E37EE315", // Your SMTP password
+          To: "ahmedhmedo73@gmail.com", // Recipient's email address
+          From: "ahmed.kamel@gs1eg.org", // Sender's email address
+          Subject: "New Inquiry from ",
+          Body: `
+              Name: ahmed<br>
+              Mobile: 01060702885<br>
+              Email: ahmedhmedo73@gmail.com<br>
+              Company: youxel<br>
+              Description: software house
+            `,
+        };
+
+        // Use SMTP.js to send email
+        Email.send(emailParams)
+          .then((message) => {
+            console.log("Email sent successfully:", message);
+            alert("Email sent successfully!");
+          })
+          .catch((error) => {
+            console.error("Failed to send email:", error);
+            alert("Failed to send email. Please try again.");
+          });
+      }
+    </script>
+  </body>
+</html>
