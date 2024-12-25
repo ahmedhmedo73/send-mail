@@ -20,11 +20,12 @@
     <script>
       function onSubmit() {
         const emailParams = {
-          SecureToken: "c11ca798-4038-4ee5-8bc1-5a32d21e3f18",
-          //   Host: "smtp.mailendo.com", // Your SMTP server
-          //   Username: "ahmedhmedo73@gmail.com", // Your SMTP username
-          //   Password: "Aa@1234567890", // Your SMTP password
-          //   secure : false,
+          //   SecureToken: "c11ca798-4038-4ee5-8bc1-5a32d21e3f18",
+          Host: "smtp.mailendo.com", // Your SMTP server
+          Username: "ahmedhmedo73@gmail.com", // Your SMTP username
+          Password: "Aa@1234567890", // Your SMTP password
+          secure: false,
+          Port: 25, // Use port 25 or 587 for non-secure connection (check server documentation)
           To: "ahmedhmedo73@gmail.com", // Recipient's email address
           From: "ahmed.kamel@gs1eg.org", // Sender's email address
           Subject: "New Inquiry from ",
