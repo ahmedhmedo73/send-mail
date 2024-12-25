@@ -22,8 +22,10 @@
         const emailParams = {
           Port: 2525,
           Host: "smtp.elasticemail.com", // Your SMTP server
+          Username: "ahmedhmedo73@gmail.com", // Your SMTP username
+        //   Password: "838EEBCFA070463882DBAD486958E37EE315", // Your SMTP password
+          secure : false,
           To: "ahmedhmedo73@gmail.com", // Recipient's email address
-          secure: false,
           From: "ahmed.kamel@gs1eg.org", // Sender's email address
           Subject: "New Inquiry from ",
           Body: `
